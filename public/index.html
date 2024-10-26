@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزرو میز کافه</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/font-face.css">
+</head>
+<body>
+    <div class="coffee-bean"></div>
+    <div class="coffee-bean"></div>
+    <div class="coffee-bean"></div>
+    <div class="coffee-bean"></div>
+    <div class="coffee-bean"></div>
+    <div class="coffee-bean"></div>
+    <div class="coffee-bean"></div>
+    <div class="coffee-bean"></div>
+    <div class="coffee-bean"></div>
+    <div class="coffee-bean"></div>
+
+    <div class="container">
+        <h1>رزرو میز کافه</h1>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="name">نام:</label>
+                <input type="text" id="name" required placeholder="نام خود را وارد کنید">
+            </div>
+            <div class="form-group">
+                <label for="mobile">شماره موبایل:</label>
+                <input type="tel" id="mobile" required placeholder="09121252326">
+            </div>
+            <div class="form-group">
+                <label for="people">تعداد افراد:</label>
+                <input type="number" id="people" min="1" required placeholder="تعداد افراد را وارد کنید">
+            </div>
+            <div class="form-group">
+                <label for="time">زمان رزرو:</label>
+                <input type="text" id="time" required placeholder="زمان را انتخاب کنید" readonly>
+            </div>
+            <button type="submit"><i class="fas fa-check"></i> رزرو کنید</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>

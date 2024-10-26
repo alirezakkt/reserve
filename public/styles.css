@@ -1,0 +1,145 @@
+/* Set background and font for the page */
+body {
+    font-family: 'Vazir', Arial, sans-serif;
+    background-color: #f7e3d4; /* Base color */
+    position: relative; /* Required for absolute positioning of beans */
+    overflow: hidden; /* Prevent overflow from beans */
+    height: 100vh; /* Full height */
+    margin: 0;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    direction: rtl;
+}
+
+/* Create the coffee bean pattern */
+.coffee-bean {
+    position: absolute;
+    width: 25px; /* Adjust size */
+    height: 45px; /* Adjust size */
+    background-color: #5d3e31; /* Darker coffee bean color */
+    border-radius: 50% 50% 45% 45%; /* Shape resembling coffee beans */
+    box-shadow: inset -8px 0 0 rgba(255, 255, 255, 0.3), inset 8px 0 0 rgba(255, 255, 255, 0.3); /* Light highlights */
+    opacity: 0.8; /* Slight transparency */
+    transform: rotate(20deg); /* Slight rotation */
+}
+
+/* Positioning multiple beans randomly */
+.coffee-bean:nth-child(1) { top: 10%; left: 10%; }
+.coffee-bean:nth-child(2) { top: 30%; left: 20%; }
+.coffee-bean:nth-child(3) { top: 50%; left: 15%; }
+.coffee-bean:nth-child(4) { top: 70%; left: 40%; }
+.coffee-bean:nth-child(5) { top: 20%; left: 70%; }
+.coffee-bean:nth-child(6) { top: 60%; left: 80%; }
+.coffee-bean:nth-child(7) { top: 40%; left: 30%; }
+.coffee-bean:nth-child(8) { top: 80%; left: 50%; }
+.coffee-bean:nth-child(9) { top: 5%; left: 85%; }
+.coffee-bean:nth-child(10) { top: 75%; left: 25%; }
+
+/* Main container styling */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+    text-align: center;
+    position: relative; /* Position relative for proper z-index */
+    z-index: 1; /* Ensure container is above beans */
+}
+
+h1 {
+    font-size: 30px;
+    color: #7d5a50;
+    margin-bottom: 25px;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #7d5a50;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="time"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #e6b8a2;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #b87c4a;
+    outline: none;
+}
+
+/* Style placeholders with Vazir font */
+input::placeholder {
+    font-family: 'Vazir', Arial, sans-serif;
+    color: #c2a293;
+    font-size: 0.9em;
+    opacity: 1;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #d87d4a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Vazir', Arial, sans-serif; /* Use Vazir font */
+}
+
+button:hover {
+    background-color: #b86c3e;
+    transform: translateY(-3px);
+}
+
+/* Center the button in the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center form contents */
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #28a745;
+}
+
+/* Additional media query for responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}

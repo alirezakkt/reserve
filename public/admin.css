@@ -1,0 +1,109 @@
+/* Apply Vazir font and reset default styles */
+* {
+    font-family: 'Vazir', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    background: #f3f4f7;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 90%;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.1em;
+}
+
+th {
+    background-color: #2c3e50; /* Dark header for contrast */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tbody tr {
+    transition: background-color 0.3s;
+}
+
+/* Row Hover Effect */
+tbody tr:hover {
+    background-color: #ffeaa7; /* Soft yellow on hover */
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Status Colors */
+tbody tr[data-status="Cancelled"] {
+    background-color: #e74c3c; /* Red for Cancelled */
+    color: white;
+}
+
+tbody tr[data-status="Seated"] {
+    background-color: #27ae60; /* Green for Seated */
+    color: white;
+}
+
+tbody tr[data-status="Reserved"] {
+    background-color: #3498db; /* Blue for Reserved */
+    color: white;
+}
+
+tbody tr[data-status="Waiting"] {
+    background-color: #f1c40f; /* Yellow for Waiting */
+    color: #2c3e50;
+}
+
+/* Placeholder styling with Vazir font */
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Vazir', Arial, sans-serif;
+    color: #a3a3a3; /* Subtle gray for placeholders */
+    font-size: 0.9em;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    th, td {
+        padding: 12px;
+        font-size: 1em;
+    }
+}
